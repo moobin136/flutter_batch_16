@@ -42,6 +42,8 @@ main() {
   print(studentList.removeAt(2));
   print(studentList);
   print(studentList.length);
+  studentList.clear();
+  print(studentList);
 
   ///class time 48.55 second
 
