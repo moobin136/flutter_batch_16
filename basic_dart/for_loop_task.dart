@@ -231,4 +231,5 @@ void main() {
   // শুধু নামগুলো বের করা
   var names = people.map((p) => p['name']).toList();
   print("সবার নাম: $names");
+  print("সবার নাম: $names");
 }
