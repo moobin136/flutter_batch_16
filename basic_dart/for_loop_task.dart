@@ -1,5 +1,3 @@
-import 'package:matcher/expect.dart';
-
 void main() {
   ///Task 1 (Easy)
   // List<int> taskList = [5, 10, 15, 20];
@@ -18,7 +16,6 @@ void main() {
   // for (int value in numberList) {
   //   sum = sum + value;
   // }
-
 
   // print(sum);
   // for (int n in numberList) {
@@ -217,20 +214,80 @@ void main() {
   // print("Vowels   : $vowelsOnly");
 
   ///Map বানাও (name, age, city)
-  List<Map<String, dynamic>> people = [
-    {'name': 'Karim', 'age': 28, 'city': 'Chittagong'},
-    {'name': 'Sohan', 'age': 22, 'city': 'Sylhet'},
+  // List<Map<String, dynamic>> people = [
+  //   {'name': 'Karim', 'age': 28, 'city': 'Chittagong'},
+  //   {'name': 'Sohan', 'age': 22, 'city': 'Sylhet'},
+  //
+  // ];
+  //
+  //
+  // // সবাইকে প্রিন্ট করা
+  // for (var person in people) {
+  //   print("${person['name']} - ${person['age']} বছর - ${person['city']}");
+  // }
+  //
+  // // শুধু নামগুলো বের করা
+  // var names = people.map((p) => p['name']).toList();
+  // print("সবার নাম: $names");
+  // print("সবার নাম: $names");
 
+  ///List থেকে unique value বের করো
+  // List<String> names = [
+  //   "Rahim",
+  //   "Karim",
+  //   "Sohan",
+  //   "Rahim",
+  //   "Mita",
+  //   "Karim",
+  //   "Sohan",
+  // ];
+  //
+  // List<String> newList = names.toSet().toList();
+  // print(newList);
+
+  ///Student marks list থেকে grade বের করো
+//   List<Map<String, dynamic>> students = [
+//     {"name": "Rahim", "marks": 85},
+//     {"name": "Karim", "marks": 72},
+//     {"name": "Sohan", "marks": 68},
+//     {"name": "Mita", "marks": 45},
+//     {"name": "Rina", "marks": 31},
+//     {"name": "Fahim", "marks": 92},
+//   ];
+//
+//   print("Student\tMarks\tGrade");
+//   print("======================");
+//   for (var student in students) {
+//     String grade = getGrade(student["marks"]);
+//     print("${student["name"]}\t${student["marks"]}\t$grade");
+//   }
+// }
+//
+// String getGrade(int marks) {
+//   if (marks >= 80) return "A+";
+//   if (marks >= 70) return "A";
+//   if (marks >= 60) return "A-";
+//   if (marks >= 50) return "B";
+//   if (marks >= 40) return "C";
+//   if (marks >= 33) return "D";
+//   return "F";
+
+  ///Shopping cart total বের করো
+  List<Map<String, dynamic>> cart = [
+    {"name": "Phone case", "price": 450, "quantity": 1},
+    {"name": "Charger", "price": 1200, "quantity": 1},
+    {"name": "Earphones", "price": 2200, "quantity": 2},
   ];
 
+  double total = 0;
 
-  // সবাইকে প্রিন্ট করা
-  for (var person in people) {
-    print("${person['name']} - ${person['age']} বছর - ${person['city']}");
+  for (var item in cart) {
+    total = (total + (item["price"] * item["quantity"]));
   }
+  print('Discount Price  16%');
+  print('Total price is ${total.toString()}');
+  double discountAmount = total - (total * (16 / 100));
 
-  // শুধু নামগুলো বের করা
-  var names = people.map((p) => p['name']).toList();
-  print("সবার নাম: $names");
-  print("সবার নাম: $names");
+  print("Discount amount: ৳${discountAmount.toStringAsFixed(2)}");
+  // আউটপুট: Total amount: ৳7850.00
 }
