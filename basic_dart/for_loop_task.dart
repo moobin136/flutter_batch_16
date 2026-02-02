@@ -220,7 +220,7 @@ void main() {
   List<Map<String, dynamic>> people = [
     {'name': 'Karim', 'age': 28, 'city': 'Chittagong'},
     {'name': 'Sohan', 'age': 22, 'city': 'Sylhet'},
-    {'name': 'Mita', 'age': 24, 'city': 'Rajshahi'}
+
   ];
 
   // সবাইকে প্রিন্ট করা
