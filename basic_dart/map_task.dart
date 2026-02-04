@@ -40,14 +40,14 @@ void main() {
   // print(normalMap.length);
 
   ///!for loop দিয়ে Map print করো
-  Map<String, dynamic> person = {
-    'name': 'Rahim',
-    'age': 25,
-    'city': 'Dhaka',
-    'country': 'Bangladesh',
-    'isStudent': true,
-    'hobbies': ['cricket', 'coding', 'reading'],
-  };
+  // Map<String, dynamic> person = {
+  //   'name': 'Rahim',
+  //   'age': 25,
+  //   'city': 'Dhaka',
+  //   'country': 'Bangladesh',
+  //   'isStudent': true,
+  //   'hobbies': ['cricket', 'coding', 'reading'],
+  // };
   // for (var key in person.values) {
   //   String newValue = person[key].toString();
   //   print(newValue);
@@ -86,7 +86,7 @@ void main() {
   //   },
   // ];
   //
-  // print("সব স্টুডেন্টের তথ্য:");
+  // print("সব স্টুডেন্টের তথ্য : ");
   // print("──────────────────────");
   //
   // for (var s in students) {
@@ -118,17 +118,17 @@ void main() {
   // print(student);
 
   ///Student marks print করো
-  Map<String, dynamic> student = {
-    'name': 'Mita Akter',
-    'age': 19,
-    'marks': {
-      'Bangla': 78,
-      'English': 85,
-      'Math': 91,
-      'Physics': 72,
-      'Chemistry': 83,
-    }
-  };
+  // Map<String, dynamic> student = {
+  //   'name': 'Mita Akter',
+  //   'age': 19,
+  //   'marks': {
+  //     'Bangla': 78,
+  //     'English': 85,
+  //     'Math': 91,
+  //     'Physics': 72,
+  //     'Chemistry': 83,
+  //   }
+  // };
 
   // marks Map-এর ভিতর দিয়ে লুপ
   // int totoal = 0;
@@ -148,13 +148,43 @@ void main() {
 
   ///marks > 80 হলে print করো
 
-  for (dynamic mak in student['marks'].entries) {
-    String name = mak.key;
-    String conString = mak.value.toString();
-    int mark = int.parse(conString);
-    if (mark >= 80) {
-      print('$name : $mark');
-    }
-    // print(value);
+  // for (dynamic mak in student['marks'].entries) {
+  //   String name = mak.key;
+  //   String conString = mak.value.toString();
+  //   int mark = int.parse(conString);
+  //   if (mark >= 80) {
+  //     print('$name : $mark');
+  //   }
+  //   print(value);
+  // }
+
+  ///Product Map বানাও (name, price)
+  ///
+  ///
+  List<Map<String, dynamic>> products = [
+    {'name': 'Smartphone', 'price': 32999.00},
+    {'name': 'Bluetooth Speaker', 'price': 3499.00},
+    {'name': 'Power Bank 20000mAh', 'price': 1899.00},
+    {'name': 'T-Shirt', 'price': 799.00},
+    {'name': 'Backpack', 'price': 2499.00},
+  ];
+
+  print("Available Products:");
+  print("");
+
+  for (dynamic p in products) {
+    print("• ${p['name'].padRight(20)} ৳${p['price'].toStringAsFixed(2)}");
   }
+
+  // বোনাস: মোট দাম বের করা
+  double total = products.fold(0, (sum, p) => sum + p['price']);
+  print("\nসব প্রোডাক্টের মোট দাম: ৳${total.toStringAsFixed(2)}");
+
+  String text = '''
+Hello,
+I am Moobin.
+I am learning Flutter.
+''';
+
+  print(text);
 }
