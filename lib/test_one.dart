@@ -1,3 +1,26 @@
+// Assignment 1--------------------------
+
+class Book {
+  final String title;
+  final String author;
+  final double price;
+
+  Book(this.title, this.author, this.price);
+
+  double discountedPrice(double discountedPrice) {
+    double discountedAmount = (price * discountedPrice / 100);
+    double finalDiscountedAmount = price - discountedAmount;
+    return finalDiscountedAmount;
+  }
+
+  void displayDetail() {
+    print('Details $title');
+    print('Book title : $title');
+    print('Book Author : $author');
+    print('Book Price : ${price.toStringAsFixed(0)}');
+  }
+}
+
 //Assignment on module 8 (Exam Week -1)
 // You must solve the following problems using Object Oriented Programming concepts:
 //
