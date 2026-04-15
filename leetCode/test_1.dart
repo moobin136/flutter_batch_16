@@ -1,4 +1,3 @@
-import 'dart:math';
 
 void main() {
   List<int> itemList = [3, 2, 4];

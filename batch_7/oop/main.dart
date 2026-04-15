@@ -1,6 +1,4 @@
-import 'extend.dart';
 import 'gatter_satter.dart';
-import 'person.dart';
 
 void main() {
   // Person tamim = Person(name: 'Moobin', address: 'Salbon', age: 17);
